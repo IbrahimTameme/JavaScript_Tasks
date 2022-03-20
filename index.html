@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-image: url(https://cdn.dribbble.com/users/6620596/screenshots/14792345/media/af61fa935b055891cb800a9e41ebb747.gif);
+            background-size: cover;
+        }
+        .main_button
+        {
+            margin: 1%;
+            background-color: #979797;
+            width: 200px;
+            height: 70px;
+            border: 2px solid rgb(24, 23, 23);
+            border-radius: 2%;
+            transition: 0.7s;
+        }
+        .main_button:hover
+        {
+            transform: scale(1.05);
+            background-color: #777777;
+        }
+        .title
+        {
+            margin-top: 7%;
+            text-align: center;
+            font-size: x-large;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .main_button:hover .title
+        {
+            font-size:  28px;
+        }
+        .inside_div
+        {
+            
+            height: 200px;
+            width: 195px;
+            background-color: #979797;
+            display: none;
+        }
+        .main_button:hover .inside_div
+        {
+            
+            position: relative;
+            bottom: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        a 
+        {
+            width: 100%;
+            height: 25%;
+            background-color: #97979756 ;
+            border-top: 2px solid #FFC4E1;
+            border-bottom: 2px solid #FFC4E1;
+            border-radius: 2%;
+            color: #FFC4E1;
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        a:hover
+        {
+            color: #FF87CA;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            height: 30%;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main_button"> <p class="title">Sunday1</p>
+        <div class="inside_div">
+            <a href="./Sunday1/Task1.html" target="_blank"  role="button" aria-pressed="true">Task1</a>
+            <a href="./Sunday1/Task2.html" target="_blank"  role="button" aria-pressed="true">Task2</a>
+            <a href="./Sunday1/Task3.html" target="_blank"  role="button" aria-pressed="true">Task3</a>
+            <a href="./Sunday1/Task4.html" target="_blank"  role="button" aria-pressed="true">Task4</a>
+
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

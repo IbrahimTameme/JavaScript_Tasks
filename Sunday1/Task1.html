@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f32d43040b.js" crossorigin="anonymous"></script>
+    <title>Task1</title>
+    <style>
+        body
+        {
+            background-color: tomato;
+        }
+        #first
+        {
+            display: inline-block;
+            
+            font-size: 70px;
+            font-weight: bolder;
+            margin-top: 20%;
+            margin-left: 30%;
+            
+            background-image: linear-gradient( orange , tan,black);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-color: white;
+            
+            border-radius: 35%;
+            
+        }
+        #first:hover
+        {
+            background-image: linear-gradient( black , tan,orange);
+            border: tan 15px solid;
+
+        }
+        i
+        {
+            font-size: 70px;
+            background-image: linear-gradient( orange , tan,black);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+    </style>
+</head>
+<body>
+    <p id="first"> </p> <i class="fa-solid fa-heart"></i>
+    
+</body>
+<script>
+    "use strict";
+    
+    let value_1 = prompt("Enter first number", "0");
+    let value_2 = prompt ("Enter second number" , "0");
+    let x = parseInt (value_1);
+    let y = parseInt (value_2);
+    let name ;
+    if (x > y)
+    {
+        name = "Hello World";
+    }
+    else
+    {
+        name = "Good Bye";
+    }
+    document.getElementById("first").innerHTML = name ;
+
+</script>
+</html>

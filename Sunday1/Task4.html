@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: rgb(199, 226, 250);
+        }
+        #first
+        {
+            
+            text-align: center;
+            font-size: 200px;
+            color: blanchedalmond;
+            font-weight: bolder;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration: underline;
+        }
+        #second
+        {
+            margin: 2%;
+            text-align: center;
+            font-size: 200px;
+            color: blanchedalmond;
+            font-weight: bolder;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration: underline;
+        }
+        #third
+        {
+            margin: 2%;
+            text-align: center;
+            font-size: 200px;
+            color: blanchedalmond;
+            font-weight: bolder;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <p id="first"></p>
+    <p id="second"></p>
+    <p id="third"></p>
+    
+</body>
+<script>
+    "use strict";
+    let value_1 = prompt("Enter the first number" , "0");
+    let value_2 = prompt("Enter the second number" , "0");
+    let value_3 = prompt("Enter the third number" , "0");
+    let num_1 = parseInt(value_1);
+    let num_2 = parseInt(value_2);
+    let num_3 = parseInt(value_3);
+    let output ;
+    let output2 ;
+    let output3;
+    if ( num_1 % 3 ==0 || num_2 % 3 ==0 || num_3 % 3 ==0 )
+    {
+        output = "Fizz";
+    }
+     if ( num_1 % 5 ==0 || num_2 % 5 ==0 || num_3 % 5 ==0)
+    {
+        output2 = "Buzz";
+    }
+     if ( num_1 % 3 == 0 && num_1 % 5 == 0 || num_2 % 3 == 0 && num_2 % 5 == 0 || num_3 % 3 == 0 && num_3 % 5 == 0 )
+    {
+        output3 = "Fizz Buzz";
+    }
+    document.getElementById("first").innerHTML = output ; 
+    document.getElementById("second").innerHTML = output2 ; 
+    document.getElementById("third").innerHTML = output3 ; 
+</script>
+</html>

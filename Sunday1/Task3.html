@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-image: url(https://cdn.dribbble.com/users/6620596/screenshots/14792345/media/af61fa935b055891cb800a9e41ebb747.gif);
+            background-size: cover;
+            
+        }
+        button
+        {
+           display: inline-block;
+           width: 500px;
+           height: 100px;
+           background-color: rgb(255, 88, 219);
+           border: 2px dashed pink;
+           margin-left: 35%;
+           
+
+        }
+        button:hover
+        {
+            background-color:rgb(247, 29, 199) ;
+        }
+        p
+        {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 100px;
+            text-decoration: double;
+        }
+        p:hover
+        {
+            color: rgb(250, 220, 181);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="math()">Do math</button>
+    <p id="ecuation"></p>
+
+    
+</body>
+<script>
+    "use strict"
+    function math()
+    {
+    let value_1 = prompt ("Enter first number" , "0");
+    alert (`Thank you, your first number was ${value_1}` )
+    let value_2 = prompt ("Enter second number" , "0")
+    alert (`Wow you entered two number ${value_1} and ${value_2} now enter the operation you want `);
+    let operation = prompt ("Please enter one of  these operations (+ , - , * , /)" ) ; 
+    alert (`Woww you finished your ecation go to console to find the answer `)
+    let num_1 = parseInt(value_1);
+    let num_2 = parseInt(value_2);
+    let output;
+    switch (operation)
+    {
+        case "+" : 
+        output = num_1 + num_2;
+        break;
+        case "-": 
+        output = num_1 - num_2;
+        break;
+        case "*": 
+        output = num_1 * num_2;
+        break;
+        case "/": 
+        output = num_1 / num_2;
+        break;
+        default:
+        output = "You did a mistake relod and try again";
+        break;       
+    }
+    console.log(output);
+    document.getElementById("ecuation").innerHTML = "Your ecuation is" + value_1 + operation + value_2;
+}
+
+</script>
+</html>
