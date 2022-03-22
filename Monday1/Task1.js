@@ -46,8 +46,9 @@ array2.splice(1 ,1);
 // push + unshift returns the new length of the array 
 // pop + shift returns the deleted item
 ////////////////////////////8
-let array3= [0,5,7,9];
+let array3= [0,5,7,9,6,6];
 let array4= [0,5,7,9,10];
+
  function middleofarray (x)
  {
 
@@ -61,7 +62,7 @@ let array4= [0,5,7,9,10];
          return   x = [x [ mnum_foreven1 ]  , x [mnum_foreven2]];
           
      }
-     if (arrlength%2 == 1 )
+     else
      {
           return x =  x [mnum_forodd] ;
         }
