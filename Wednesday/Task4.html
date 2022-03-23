@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        div
+        {
+            border: 2px black solid;
+            height: 200px;
+            width: 400px;
+        
+        }
+    </style>
+</head>
+<body>
+    <input type="number" name="fsize" id="fsize" onchange="fsize()" >
+    <label for="bold">bold</label>
+    <input type="checkbox" name="bold" id="bold" onchange="boldin()" onmousemove="boldout()" >
+    <label for="italic">italic</label>
+    <input type="checkbox" name="italic" id="italic" onchange="itain()" onmouseout="itaout()">
+    <label for="UL">UL</label>
+    <input type="checkbox" name="underline" id="UL" onchange="ULin()" onmouseout="ULout()">
+    <br>
+   
+    <div >
+        <p id="div1">hello world</p>
+    </div>
+
+    
+</body>
+<script src="./Task4.js"> 
+
+</script>
+</html>
