@@ -10,12 +10,21 @@
         {
             display: none;
         }
+        div
+        {
+            display: inline;
+            color: red;
+            font-weight: bold;
+            font-size: small;
+        }
     </style>
 </head>
 <body>
-  Enter password :  <input type="password" name="" id="pass1" value="enterpassword" >
+  Enter password :  <input type="password" name="" id="pass1" onchange="onchan()" >
+  <div class="err"></div>
   <br><br>
-  Enter password :  <input type="password" name="" id="pass2">
+  Enter password :  <input type="password" name="" id="pass2" onchange="onchan2()">
+  <div class="err"></div>
   <br><br>
   <button id="btn">Submit</button>
     

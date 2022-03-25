@@ -162,4 +162,119 @@ function removeFromArray2(x,y)
     }
     return x ;
 }
+////////////////////////////16
+function oddArray (x)
+{
+    let oddarr = []
+    let y = 0 ;
+    for (let i = 0 ; i < x.length ; i++)
+    {
+        if (x[i]%2 != 0)
+        {
+            oddarr[y] = x[i]
+            y++;
+        }
 
+    }
+    return oddarr ;
+}
+////////////////////////////17
+function aveArray (x)
+{
+    
+    let total = 0;
+    for(let i=0 ; i < x.length ; i++)
+    {
+        total += x[i];
+
+    }
+    return total / x.length; 
+}
+////////////////////////////18
+let animals2 = ['catss', 'elephent', 'bird' , 'bl'] ;
+function shorterInArray (x)
+{
+    let shortest = x[0] ; 
+    let i = 0 ;
+    while(i < x.length)
+    {
+        
+        if (shortest.length >= x[i].length )
+        {
+            shortest = x[i];
+
+
+        }
+        i++ ;
+    }
+        
+ return shortest;
+
+    
+}
+////////////////////////////19
+function repeatChar (x,y)
+{
+    let amount = 0 
+    for (let i = 0 ; i < x.length ; i++)
+    {
+        if (y === x[i])
+        {
+            amount += 1 ; 
+        }
+    }
+
+return amount ;
+}
+////////////////////////////20
+let examplefor20 = ['aaa','vv','apple']
+function  evenIndexOddLength (x)
+{
+    let arr = [];
+    let i = 0 ;
+    let y = 0 ;
+    while (i < x.length)
+    {
+        if(x[i].length%2 != 0 && x.indexOf(x[i])%2 == 0)
+        {
+            arr[y] = x[i];
+            y++
+        }
+        i++;
+    }
+
+    return arr 
+
+}
+////////////////////////////21
+let examplefor21 = [5555 , 2 , 4 ]
+function powerElementIndex (x)
+{
+    let arr = [];
+    
+    for (let i = 0 ; i< x.length ; i++)
+    {
+        arr[i] = Math.pow( x[i] , x.indexOf(x[i]) )
+
+    }
+    return arr ;
+}
+////////////////////////////22
+let examplefor22 = [2 , 4 , 4 , 8 , 10 , 15 , 20]
+function evenNumberEvenIndex (x)
+{
+    let arr = [];
+    let i = 0 ;
+    let y = 0 ;
+    while (i < x.length)
+    {
+        if(x[i]%2 == 0 && x.indexOf(x[i])%2 == 0)
+        {
+            arr[y] = x[i];
+            y++
+        }
+        i++;
+    }
+
+    return arr
+}

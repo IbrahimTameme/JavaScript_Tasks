@@ -203,6 +203,74 @@ function positive (x)
     }
 
 }
+///////////////////18
+function fullName (x , y)
+{
+    return x + " " + y ;
+}
+///////////////////19
+function average (x,y,z,a,b)
+{
+    let arr = [x,y,z,a,b];
+    let total = 0;
+    for(let i=0 ; i < arr.length ; i++)
+    {
+        total += arr[i];
+
+    }
+    return total / arr.length; 
+}
+///////////////////20
+function randomnumber ()
+{
+    return Math.random()
+}
+///////////////////21
+function randomBetweenNumbers(x,y)
+{
+    return Math.random() * (x - y) + y ;
+} 
+///////////////////22
+function scoreInUniversty(x)
+{
+    if(x >= 95 && x <= 100)
+    {
+        return "A";
+    }
+    if(x >= 85 && x < 95)
+    {
+        return "B";
+    }
+    if(x >= 70 && x < 85)
+    {
+        return "C";
+    }
+    if(x >= 50 && x < 70)
+    {
+        return "D";
+    }
+    if(x >= 0 && x < 50)
+    {
+        return "F";
+    }
+}
+///////////////////23
+let blue = 0  ;
+function counter()
+{
+    let x = 0 ;
+    x++
+    return blue += x ;
+}
+///////////////////24
+function resetcounter ()
+{
+    let prev = blue;
+    blue = 0 ;
+    return prev + " counter has been reseted " ; 
+    
+}
+
 
 
 
