@@ -103,7 +103,7 @@ function longestName (x)
     return x[longestindex].name.first + " " + x[longestindex].name.last ;
 }
 ///////////////////////////////////////////7
-let aa = "saja habla saja habla"
+
 console.log(aa.split(' '));
 function repeatWord(x){
     let changed =x.toLowerCase().split(' ')
