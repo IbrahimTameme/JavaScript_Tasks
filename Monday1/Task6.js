@@ -91,14 +91,20 @@ function showFirstAndLast(arr){
 * to the function with the new key and value added for each object 
 * 
 * Test Cases:
-*   Test Case :addKeyAndValue([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 'title', 'instructor') 
-*   
+Test Case :addKeyAndValue([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 'title', 'instructor') 
+   
 * Result:
 *   [{name: 'Elie', title:'instructor'}, {name: 'Tim', title:'instructor'}, {name: 'Matt', title:'instructor'}, {name: 'Colt', title:'instructor'}]
 *
 */
 function addKeyAndValue(arr,key,value){
-    //Your Code Here
+    let newarr = [];
+    arr.forEach(element =>
+    {
+        element[key]=value;
+        newarr.push(element )
+    })
+    return newarr
 }
 
 /*
@@ -123,5 +129,46 @@ function addKeyAndValue(arr,key,value){
 */
 
 function vowelCount(str){
-  //Your Code Here
+  let newobj = {};
+  let intolist = []
+  let a= 0;
+  let e= 0;
+  let i= 0;
+  let o= 0;
+  let u= 0;
+
+  for(let i = 0 ; i < str.length ; i++)
+  {
+      intolist.push(str[i])
+
+   }
+
+
+      intolist.forEach(element => {
+        if (element == 'a'||  element == 'A'){
+            a++;
+            newobj.a=a;
+        }
+        if (element == 'e' || element == 'E'){
+            e++;
+            newobj.e=e;
+        }
+        if (element == 'i'||element == 'I'){
+            i++;
+            newobj.i=i;
+        }
+        if (element == 'o'||  element == 'O'){
+            o++;
+            newobj.o=o;
+        }
+        if (element == 'u' || element == 'U'){
+            u++;
+            newobj.u=u;
+        }
+
+        
+          
+      });
+      return newobj;
+  
 }
