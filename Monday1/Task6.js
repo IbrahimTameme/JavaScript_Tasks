@@ -13,13 +13,18 @@
 *
 *
 */
-function doubleValues(arr){
-    arr.forEach(element => {
-        
+let arrrr = ["hello" , "how", "thisisto"]
+let numarr = [6 , 3 ,4 ,4 ,5 ,1]
+function pow2arr (x)
+{
+    let newarr = []
+   
+    x.forEach(i => {
+        newarr.push(i*2)
+        i++
     });
-   //Your Code Here
+    return newarr;
 }
-
 /*
 * Exercise 2:
 * Write a function called onlyEvenValues which accepts an array and returns a new array with only the even values in the array passed to the function
@@ -32,9 +37,28 @@ function doubleValues(arr){
 *  Test Case 1:  [2]
 *  Test Case 2: [2,10]
 */
-function onlyEvenValues(arr){
-    //Your Code Here
-    
+function evenvaluse(x,y)
+{
+    let newarr = []
+
+    x.forEach(element => {
+        if(element%2 == 0)
+        {
+            newarr.push(element)
+
+
+        }
+        
+    });
+    y.forEach(element =>
+    {
+        if(element%2 ==0)
+        {
+            newarr.push(element)
+        }
+
+    });
+    return newarr;
 }
 
 /*
@@ -51,6 +75,13 @@ function onlyEvenValues(arr){
 *
 */
 function showFirstAndLast(arr){
+    let newarray = [] ; 
+    arr.forEach(element => {
+        newarray.push(element[0] + element[arr.length-1])
+        
+        
+    });
+    return newarray
    //Your Code Here
 }
 
