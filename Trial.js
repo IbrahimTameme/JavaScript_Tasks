@@ -1,40 +1,75 @@
 "use sctrict";
 
 
+var checck = new Promise(function(x , y){
+ let i = document.getElementById("input").value ;
+ if(i === "sure")
+ {
+     x("u will have good time")
+     document.getElementById("result").innerText = "u will have good time";
+ }
+ else
+ {
+     y(Error("you will be disapponted"));
+     document.getElementById("result").innerText = "you will be disapponted";
+ }
 
 
-class country 
+})
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////map
+let str = ["a" ,"b" ,"c"];
+let nwar = str.map(function(x,y)
 {
-    constructor (capital , continent , independence_year)
-    {
-        this.a = capital ;
-        this.b = continent ;
-        this.c = independence_year;
-    }
+    return x + "a";
+})
+
+console.log(nwar);
+
+
+
+// class country 
+// {
+//     constructor (capital , continent , independence_year)
+//     {
+//         this.a = capital ;
+//         this.b = continent ;
+//         this.c = independence_year;
+//     }
     
 
-    capital ()
-    {
-        return this.a ;
-    }
+//     capital ()
+//     {
+//         return this.a ;
+//     }
     
 
-}
+// }
 
-class subclass1 extends country 
-{
+// class subclass1 extends country 
+// {
 
-}
+// }
 
 
-let jordan = new country("Amman" , "asia" , "1955") ; 
-let korea = new subclass1("Seoul" , "asia" , "1948");
-let egypt = new  country ("cairo" , "africa" , "1922");
-document.getElementById("id1").innerHTML = jordan.a + " " + jordan.b + " " + jordan.c ; 
-document.getElementById("id2").innerHTML = egypt.a + " "  + egypt.b  + " "  + egypt.c; 
-document.getElementById("id3").innerHTML = jordan.capital() ;
-document.getElementById("id4").innerHTML = korea.capital() ;
-document.getElementById("id5").innerHTML = korea.a + " "  + korea.b  + " "  + korea.c; 
+// let jordan = new country("Amman" , "asia" , "1955") ; 
+// let korea = new subclass1("Seoul" , "asia" , "1948");
+// let egypt = new  country ("cairo" , "africa" , "1922");
+// document.getElementById("id1").innerHTML = jordan.a + " " + jordan.b + " " + jordan.c ; 
+// document.getElementById("id2").innerHTML = egypt.a + " "  + egypt.b  + " "  + egypt.c; 
+// document.getElementById("id3").innerHTML = jordan.capital() ;
+// document.getElementById("id4").innerHTML = korea.capital() ;
+// document.getElementById("id5").innerHTML = korea.a + " "  + korea.b  + " "  + korea.c; 
 
 
 

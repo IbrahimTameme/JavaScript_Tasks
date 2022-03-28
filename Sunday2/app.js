@@ -5,6 +5,7 @@ let salesarr = [];
 
 
 
+
 function storeinlocalstorage()
 {
     let strng = JSON.stringify(salesarr[salesarr.length-1])
@@ -15,7 +16,15 @@ function fromlocalstoarge ()
 {
     let keyy = salesarr[salesarr.length-1].name ;
     let localstoargeitem = localStorage.getItem(keyy);
+    /// i have to check if toobject is emepty and if false enter the data into the array
     let toobject = JSON.parse(localstoargeitem);
+    if(toobject !== null)
+    {
+        salesarr = toobject;
+    }
+  
+
+    // 
     return toobject;
 }
 
@@ -75,7 +84,7 @@ function showdataontble()
 
     let tabledt1 = document.createElement("td");
     tabledt1.innerText = getfromlocalstoarge.name;
-    
+    console.log(tabledt1);
     let tabledt2 = document.createElement("td");
     tabledt2.innerText = getfromlocalstoarge.ptype;
     
