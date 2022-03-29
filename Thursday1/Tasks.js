@@ -43,7 +43,7 @@ let b = a.reduce(reducer, {});
       
 
 
-console.log( b);
+// console.log( b);
 ///////////////////////////////////////////2
 
 function firstName(x)
@@ -153,3 +153,98 @@ function repeatletters(x){
 }
 
 ///////////////////////////////////////////9
+function selectFromObject(x,y){
+let obj = {}
+    for(let i =0 ; i<y.length ; i++)
+    {
+        
+        if(Object.keys(x)[i]==y[i])
+        {
+            // console.log(x[y[i]]);
+            obj[y[i]] = x[y[i]];
+        }
+    }
+return obj
+}
+
+/////////////////////////////////////////////////////10
+
+function objectToArray(x)
+{
+    
+    let keyss =Object.keys(x)
+    let values = Object.values(x)
+    let arr = keyss.concat(values)
+    return arr;
+} 
+ console.log(objectToArray({firstName:"Moh",age:24})); 
+ /////////////////////////////////////////////////////11
+//  Create a function called arrayToObject
+//  that accept an array
+//  and return an object of the keys and values in this object
+ 
+//  Ex: arrayToObject(["firstName","Moh","age",24])
+//  => {firstName:"Moh",age:24}
+function arrayToObject(x)
+{
+     let newobj = {};
+     for(let i=0 ; i<x.length; i+=2)
+     {
+         newobj[x[i]] = x[i+1];
+         
+     }
+     return newobj;
+
+}
+/////////////////////////////////////////////////////12
+
+function onlyNumber(x)
+{
+    let numberobj = {}
+    for(let i = 0 ; i < Object.keys(x).length; i++)
+    {
+        if(typeof(Object.values(x)[i])== "number" )
+        {
+            console.log(Object.values(x)[i]);
+            numberobj[Object.keys(x)[i]] = Object.values(x)[i]
+        }
+    }
+    return numberobj
+}
+/////////////////////////////////////////////////////13
+function onlyString
+(x)
+{
+    let stringobj = {}
+    for(let i = 0 ; i < Object.keys(x).length; i++)
+    {
+        if(typeof(Object.values(x)[i])== "string" )
+        {
+            console.log(Object.values(x)[i]);
+            stringobj[Object.keys(x)[i]] = Object.values(x)[i]
+        }
+    }
+    return stringobj
+}
+/////////////////////////////////////////////////////14
+function onlyArray
+(x)
+{
+    let arrayobj = {}
+    for(let i = 0 ; i < Object.keys(x).length; i++)
+    {
+        if(Array.isArray(Object.values(x)[i]) )
+        {
+            console.log(Object.values(x)[i]);
+            arrayobj[Object.keys(x)[i]] = Object.values(x)[i]
+        }
+    }
+    return arrayobj
+}
+
+/////////////////////////////////////////////////////15
+function keysArray (x)
+{
+    let keys = Object.keys(x);
+    return keys;
+}
