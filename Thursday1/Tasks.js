@@ -103,17 +103,22 @@ function longestName (x)
     return x[longestindex].name.first + " " + x[longestindex].name.last ;
 }
 ///////////////////////////////////////////7
-
-console.log(aa.split(' '));
+"ahmad ahmad ahmad ahmad ahmad ahmad ahmad ahmad"
+// console.log(aa.split(' '));
 function repeatWord(x){
     let changed =x.toLowerCase().split(' ')
-    let output = {};
+    let output = {
+        
+    };
     let count =0;
     for (let i = 0 ; i < changed.length ; i++ )
     {  let try1 = output[changed[i]]
+        console.log(try1);
         if (try1)
         {
+            
             count = try1 ;
+           
         }
         else
         {
@@ -130,9 +135,11 @@ function repeatletters(x){
     let count =0;
     for (let i = 0 ; i < changed.length ; i++ )
     {  let try1 = output[changed[i]]
+        
         if (try1)
         {
             count = try1 ;
+            
         }
         else
         {
@@ -141,6 +148,8 @@ function repeatletters(x){
         output[changed[i]] = count+1
         
     }
+    
     return output
 }
+
 ///////////////////////////////////////////9
