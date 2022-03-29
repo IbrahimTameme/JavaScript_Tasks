@@ -1,21 +1,58 @@
 "use sctrict";
+let ulparent = document.getElementById("fold");
+ulparent.style.margin = "15px"
 
+async function getdata()
+{
+    let respone = await fetch("https://eu1.locationiq.com/v1/search.php?key=pk.146180d54ef1b81b7922cf956cba402d&q=amman&format=json")
+    // console.log( respone);
+    let data = await respone.json()
+    console.log( data);
+//     let i = [data];
+//     console.log(i);
 
-var checck = new Promise(function(x , y){
- let i = document.getElementById("input").value ;
- if(i === "sure")
+data.map((x,y)=>
  {
-     x("u will have good time")
-     document.getElementById("result").innerText = "u will have good time";
- }
- else
- {
-     y(Error("you will be disapponted"));
-     document.getElementById("result").innerText = "you will be disapponted";
+     let lichild = document.createElement("li");
+     lichild.style.listStyleType = "none";
+     lichild.style.textAlign="center"
+     lichild.style.border  = "2px solid black";
+     lichild.style.padding = "10px"
+     let i = x.display_name.split(",",2)
+     lichild.innerHTML = ` <h3 style=" color:red ;">display name: </h3>
+      ${i} 
+      <h3 style=" color:red ;"> lat: </h3> ${x.lat} 
+      <h3 style=" color:red ;"> lon: </h3> ${x.lon}`;
+     ulparent.appendChild(lichild);
+ 
+
+ })
+ return data
  }
 
 
-})
+getdata()
+
+
+
+
+
+//////////////////////////////////////promise
+// var checck = new Promise(function(x , y){
+//  let i = document.getElementById("input").value ;
+//  if(i === "sure")
+//  {
+//      x("u will have good time")
+//      document.getElementById("result").innerText = "u will have good time";
+//  }
+//  else
+//  {
+//      y(Error("you will be disapponted"));
+//      document.getElementById("result").innerText = "you will be disapponted";
+//  }
+
+
+// })
 
 
 
@@ -28,13 +65,13 @@ var checck = new Promise(function(x , y){
 
 
 //////////////////////map
-let str = ["a" ,"b" ,"c"];
-let nwar = str.map(function(x,y)
-{
-    return x + "a";
-})
+// let str = ["a" ,"b" ,"c"];
+// let nwar = str.map(function(x,y)
+// {
+//     return x + "a";
+// })
 
-console.log(nwar);
+// console.log(nwar);
 
 
 
