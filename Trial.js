@@ -1,37 +1,93 @@
 "use sctrict";
-let ulparent = document.getElementById("fold");
-ulparent.style.margin = "15px"
 
-async function getdata()
-{
-    let respone = await fetch("https://eu1.locationiq.com/v1/search.php?key=pk.146180d54ef1b81b7922cf956cba402d&q=amman&format=json")
-    // console.log( respone);
-    let data = await respone.json()
-    console.log( data);
-//     let i = [data];
-//     console.log(i);
 
-data.map((x,y)=>
- {
-     let lichild = document.createElement("li");
-     lichild.style.listStyleType = "none";
-     lichild.style.textAlign="center"
-     lichild.style.border  = "2px solid black";
-     lichild.style.padding = "10px"
-     let i = x.display_name.split(",",2)
-     lichild.innerHTML = ` <h3 style=" color:red ;">display name: </h3>
-      ${i} 
-      <h3 style=" color:red ;"> lat: </h3> ${x.lat} 
-      <h3 style=" color:red ;"> lon: </h3> ${x.lon}`;
-     ulparent.appendChild(lichild);
+let text = `Lorem Ipsum is simply dummy text of the printing and typesetting 
+
+industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum`; 
+
+
+let n = text.replace(/ipsum$/im , "lolo");
+document.getElementById("demo").innerHTML = n;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let ulparent = document.getElementById("fold");
+// ulparent.style.margin = "15px"
+
+// async function getdata()
+// {
+//     let respone = await fetch("https://eu1.locationiq.com/v1/search.php?key=pk.146180d54ef1b81b7922cf956cba402d&q=amman&format=json")
+//     // console.log( respone);
+//     let data = await respone.json()
+//     console.log( data);
+// //     let i = [data];
+// //     console.log(i);
+
+// data.map((x,y)=>
+//  {
+//      let lichild = document.createElement("li");
+//      lichild.style.listStyleType = "none";
+//      lichild.style.textAlign="center"
+//      lichild.style.border  = "2px solid black";
+//      lichild.style.padding = "10px"
+//      let i = x.display_name.split(",",2)
+//      lichild.innerHTML = ` <h3 style=" color:red ;">display name: </h3>
+//       ${i} 
+//       <h3 style=" color:red ;"> lat: </h3> ${x.lat} 
+//       <h3 style=" color:red ;"> lon: </h3> ${x.lon}`;
+//      ulparent.appendChild(lichild);
  
 
- })
- return data
- }
+//  })
+//  return data
+//  }
 
 
-getdata()
+// getdata()
 
 
 
